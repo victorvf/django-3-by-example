@@ -5,11 +5,15 @@
 {% endblock %}
 
 {% block content %}
+    <a class="back-link" href="{% url 'blog:post_list' %}"> <- Back to Posts</a>
+
     <h1>{{ post.title }}</h1>
 
     <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
 
     <p>{{ post.body|linebreaks }}</p>
 
-    <a class="previous" href="{% url 'blog:post_list' %}">Back to Posts</a>
+    <a class="right-side" href="{% url 'blog:post_share' post.id %}">
+        Share this post
+    </a>
 {% endblock %}

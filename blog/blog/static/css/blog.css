@@ -9,8 +9,12 @@ a {
     text-decoration: none;
 }
 
-a.previous {
+a.right-side {
     float: right;
+}
+
+a.back-link {
+    margin-top: 10px;
 }
 
 h1 {
