@@ -43,7 +43,11 @@ LOCAL_APPS = [
     'blog',
 ]
 
-INSTALLED_APPS = (DEFAULT_APPS + LOCAL_APPS)
+THIRD_APPS = [
+    'taggit',
+]
+
+INSTALLED_APPS = (DEFAULT_APPS + LOCAL_APPS + THIRD_APPS)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
