@@ -2,12 +2,17 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import send_mail
 from django.db.models import Count
+from django.contrib.postgres.search import (
+    SearchVector,
+    SearchRank,
+    SearchQuery,
+)
 
 from taggit.models import Tag
 
 from .models import Post
 
-from .forms import EmailPostForm, CommentForm
+from .forms import EmailPostForm, CommentForm, SearchForm
 
 """
 from django.views.generic import ListView
@@ -113,4 +118,33 @@ def post_share(request, post_id):
         request,
         'blog/post/post_share.html',
         {'post': post, 'form': form, 'sent': sent},
+    )
+
+
+def post_search(request):
+    form = SearchForm()
+
+    query = None
+    results = []
+
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+
+        if form.is_valid():
+            query = form.cleaned_data['query']
+
+            search_vector = (
+                    SearchVector('title', weight='A')
+                    + SearchVector('body', weight='A')
+            )
+            search_query = SearchQuery(query)
+
+            results = Post.published.annotate(
+                rank=SearchRank(search_vector, search_query)
+            ).filter(rank__gte=0.3).order_by('-rank')
+
+    return render(
+        request,
+        'blog/post/post_search.html',
+        {'form': form, 'query': query, 'results': results},
     )
