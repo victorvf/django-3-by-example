@@ -4,11 +4,9 @@
 
 <p align="center">
   :earth_americas:
-</p>
-
-<p align="center">
   <a href="#bulb-sobre">Português</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bulb-about">English</a>
+  :earth_americas:
 </p>
 
 <blockquote align="center">"Os problemas são oportunidades para se mostrar o que sabe.” - Duke Ellington</blockquote>
