@@ -1,6 +1,10 @@
-<h1 align="center">
-    <img alt="GoStack" src=".github/django.gif" width="200px" />
+<h1 align="center" id="top">
+    <img alt="GoStack" src=".github/django.gif" width="300px" />
 </h1>
+
+<p align="center">
+  :earth_americas:
+</p>
 
 <p align="center">
   <a href="#bulb-sobre">Português</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -37,7 +41,7 @@
 - Feed RSS
 - Pesquisa full-text do PostgreSQL
 
-### 1. <a href="#">Bookmarks</a>
+### 2. <a href="#">Bookmarks</a>
 
 <p>O que foi estudado neste exemplo:</p>
 
@@ -83,7 +87,7 @@ Este projeto está sob a licença MIT. Confira o arquivo [LICENSE](https://githu
 - Feed RSS
 - PostgreSQL full-text search
 
-### 1. <a href="#">Bookmarks</a>
+### 2. <a href="#">Bookmarks</a>
 
 <p>What was studied in this example:</p>
 
@@ -96,4 +100,4 @@ This project is under the MIT license. See the archive [LICENSE](https://github.
 <br>
 <br>
 
-<p align="right"><a href="#bulb-sobre">Back to the top | Voltar ao topo</a></p>
+<p align="right"><a href="#top">Back to the top | Voltar ao topo</a></p>
