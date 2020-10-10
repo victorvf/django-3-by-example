@@ -4,9 +4,7 @@
 
 <p align="center">
   :earth_americas:
-  <a href="#bulb-sobre">Português</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#bulb-about">English</a>
-  :earth_americas:
+  <a href="#english">English</a>
 </p>
 
 <blockquote align="center">"Os problemas são oportunidades para se mostrar o que sabe.” - Duke Ellington</blockquote>
@@ -53,7 +51,7 @@ Este projeto está sob a licença MIT. Confira o arquivo [LICENSE](https://githu
 <br>
 <br>
 
-<h2 align="center">English</h2>
+<h2 align="center" id="english">English</h2>
 
 <blockquote align="center">"Problems are oppotunities to show what you know.” - Duke Ellington</blockquote>
 
