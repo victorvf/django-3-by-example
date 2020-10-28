@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
 from .views import dashboard, register, edit
@@ -40,4 +40,5 @@ urlpatterns = [
     ),
     path('register/', register, name='register'),
     path('edit/', edit, name='edit'),
+    path('social-auth/', include('social_django.urls', 'social')),
 ]
