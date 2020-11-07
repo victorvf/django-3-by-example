@@ -41,6 +41,7 @@ DEFAULT_APPS = [
 
 LOCAL_APPS = [
     'account',
+    'images',
 ]
 
 THIRD_APPS = [
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [Path.joinpath(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
